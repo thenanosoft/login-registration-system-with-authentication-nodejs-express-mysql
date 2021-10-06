@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  -if(flag == 1)
+    .alert.alert-danger(role="alert") #{message}
+  -if(flag == 0)
+    .alert.alert-success(role="alert") #{message}
+  .row
+    .col-lg-1
+    .col-lg-4
+      include include/login
+    .col-lg-2 
+    .col-lg-4
+      include include/registration
+    .col-lg-1
